@@ -1,13 +1,18 @@
 import { memo } from "react";
-
-const Homepapes = () => {
+import React from "react";
+import Header from "./theme/Header";
+import Footer from "./theme/Footer";
+import PropTypes from "prop-types";
+const MasterLayout = ({ children, ...pops }) => {
   return (
-    <>
-      <h1>Header</h1>
-      <h1>Body</h1>
-      <h1>Footer</h1>
-    </>
+    <div {...pops}>
+      <Header />
+      {children}
+      <Footer />
+    </div>
   );
 };
 
-export default memo(Homepapes);
+MasterLayout.propTypes = { children: PropTypes.node.isRequired };
+
+export default memo(MasterLayout);
