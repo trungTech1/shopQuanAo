@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Homepapes from "./papes/users/homepapes";
+import Homepapes from "./papes/users";
 import { ROUTERS } from "./utils/router";
 
 const renderUserRouter = () => {

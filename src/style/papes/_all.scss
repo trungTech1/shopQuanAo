@@ -24,7 +24,18 @@ body {
   flex: 0 0 50%;
   max-width: 50%;
 }
-
+.col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-lg-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
 @include responsive($DESKTOP) {
   .col-xl-3 {
     flex: 0 0 25%;
@@ -36,10 +47,41 @@ body {
   }
 }
 
-@include responsive($MEDIUM_DEVICE) {
-  .col-lg-3 {
-    flex: 0 0 25%;
-    max-width: 25%;
-    background-color: red;
+@include responsive($TABLET_DEVICE) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@include responsive($WIDE_MOBILE) {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@include responsive($SMALL_DEVICE) {
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.button-submit {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: map.get($theme-colors, "main");
+  border: none;
+  padding: 16px 30px 17px;
+  height: 100%;
 }

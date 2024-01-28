@@ -1,0 +1,103 @@
+@use "sass:map";
+@import "../../../../style/papes/theme";
+.footer {
+  background-color: #f3f6fa;
+  padding-top: 70px;
+  padding-bottom: 0px;
+
+  .footer_about {
+    margin-bottom: 15px;
+    display: inline-block;
+    ul li {
+      list-style: none;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: map.get($theme-colors, "nomal-text");
+    }
+    &__logo {
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+  }
+  .footer_widget {
+    margin-bottom: 30px;
+    overflow: hidden;
+    h6 {
+      font-size: 16px;
+      color: map.get($theme-colors, "nomal-text");
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    ul {
+      float: left;
+      width: 50%;
+      li {
+        list-style: none;
+        a {
+          display: block;
+          font-size: 14px;
+          line-height: 32px;
+          text-decoration: none;
+
+          color: map.get($theme-colors, "nomal-text");
+          margin-bottom: 5px;
+          &:hover {
+            color: map.get($theme-colors, "main");
+          }
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      color: map.get($theme-colors, "nomal-text");
+      margin-bottom: 30px;
+    }
+    form {
+      margin-bottom: 30px;
+      .input-group {
+        display: flex;
+        input {
+          width: 100%;
+          font-size: 16px;
+          padding-left: 20px;
+          color: map.get($theme-colors, "nomal-text");
+          height: 46px;
+          border: 1px solid #ebebeb;
+          ::placeholder {
+            color: map.get($theme-colors, "nomal-text");
+          }
+        }
+        button {
+          padding: 0 26px;
+          height: 46px;
+          min-width: max-content;
+        }
+      }
+    }
+  }
+  .footer_widget_social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    div {
+      :hover {
+        background-color: map.get($theme-colors, "main");
+        color: #fff;
+        border: #fff;
+      }
+      svg {
+        font-size: 20px;
+        color: #404040;
+        padding: 10px;
+        border: 1px solid #ededed;
+        border-radius: 50%;
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
+}
